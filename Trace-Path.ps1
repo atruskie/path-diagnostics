@@ -154,7 +154,7 @@ function Trace-Path {
             $next_char = $Path[$error_index]
             if ([Char]::IsControl($next_char) -or [Char]::IsWhiteSpace($next_char)) {
                 $alt = ''
-                if ($next_char = ' ') {
+                if ($next_char -eq ' ') {
                     $alt = '<space>'
                 }
                 else {
